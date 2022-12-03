@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          
+        </style>
+    </head>
+    <body>
+        <h1>Get a FizzBuzz result!</h1>
+        <label for="number">Type a number: </label>
+        <input type="text" id="inputText">
+        <button onclick="btnResultClick()">Click Here!</button>
+        <hr>
+        <p id="hasil"></p>
+
+        <script>
+            
+
+            function btnResultClick(){
+                let inputText = document.getElementById("inputText").value;
+                let hasil = document.getElementById("hasil");
+                let p = document.createComment("p");
+
+                if((!/^[0-9]+$/.test(inputText)) || inputText == '0'){
+                    alert("Hanya boleh diinput dengan angka > 0");
+                    var textHasil ='';
+                } else {
+
+                    if (inputText % 3 == 0) {
+                        var textHasil = 'Fizz!' + "<br>";                 
+                    }
+                    if (inputText % 5 == 0) {
+                        var textHasil = 'Buzz!' + "<br>";                 
+                    }
+                    if (inputText % 5 == 0 && inputText % 3 == 0) {
+                        var textHasil = 'FizzBuzz!' + "<br>";                 
+                    }
+                    if (!((inputText % 5 == 0 && inputText % 3 == 0) || inputText % 3 == 0 || inputText % 5 == 0)) {
+                        var textHasil = inputText + "<br>";                 
+                    }
+                }
+
+                
+                console.log(textHasil);
+                document.getElementById("hasil").innerHTML += textHasil ;
+
+            }
+
+        </script>
+    </body>
+</html>
