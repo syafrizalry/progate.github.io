@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lucida Grande";
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  background-size: cover;
+  color: black;
+  text-align: center;
+}
+
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 45px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.top-wrapper p {
+  opacity: 0.7;
+  margin-bottom: 3px;
+}
+
+.top-wrapper img {
+  width: 20%;
+  height: auto;
+}
+
+.top-wrapper img:hover {
+  filter: grayscale(1);
+  transform: scale(0.5) rotate(45deg);
+  transition: all 1s ease;
+}
+
+
+.btn-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-wrapper p {
+  margin: 10px 0;
+}
+
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 20px;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: left;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display:none;
+}
+
+
+.about-wrapper {
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  color: #5f5d60;
+}
+
+.heading h2 {
+  font-weight: normal;
+}
+
+.about {
+  float: left;
+  width: 25%;
+}
+
+.about-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #b3aeb5;
+}
+
+.project-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.projects {
+  text-align: center;
+        display: inline-block;
+        justify-content: space-evenly;
+}
+
+.project {
+  float: left;
+  width: 33.33%;
+  
+}
+
+.project-icon {
+  position: relative;
+  
+}
+
+/* .project-icon p {
+  position: absolute;
+  top: 44%;
+  width: 100%;
+  color: white;
+} */
+
+.project-icon img {
+  position: relative;
+  width: 60%;
+  height: auto;
+  /* animation-name: zoom-in-out;
+  animation-duration: 2s; */
+  -webkit-animation:zoom-in-out 2s; /* Safari dan Chrome */
+  -moz-animation:zoom-in-out 2s; /* Firefox */
+  -ms-animation:zoom-in-out 2s; /* Internet Explorer */
+  -o-animation:zoom-in-out 2s; /* Opera */
+  animation:zoom-in-out 2s; /* W3C */
+  animation-iteration-count: infinite;
+}
+
+@keyframes zoom-in-out {
+  0% { transform: scale(1); }
+   25% { transform: scale(0.6); }
+   50% { transform: scale(0.7); }
+   75% { transform: scale(0.6); }
+   100% { transform: scale(1); }
+}
+
+.text-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #b3aeb5;
+}
+
+.heading h3 {
+  font-weight: normal;
+}
+
+.contact-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.contact {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+}
+
+.contact:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+.contact-form {
+  padding-top: 100px;
+}
+
+input, textarea{
+  width:400px;
+  margin-top:10px;
+  margin-bottom:30px;
+  padding:20px;
+  font-size:18px;
+  border:1px solid #dee7ec;
+  border-radius: 10px;
+}
+
+.contact-submit{
+
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+}
+
+
+.footer {
+  background-color: #2f5167;
+  color: #fff;
+  height: 120px;
+  padding-right: 40px;
+}
+
+.footer img {
+  padding-top: 10px;
+}
+
+.footer-logo {
+  float: left;
+  font-size: 32px;
+}
+
+.footer-list {
+  float: right;
+}
+
+.footer-list li {
+  list-style: none;
+}
+
+
+.footer a {
+  line-height: 30px;
+  padding: 0 25px;
+  color: white;
+  float: left;
+  transition: all 0.5s;
+}
+
+.footer a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
