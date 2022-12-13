@@ -7,6 +7,81 @@ body {
   font-family: "Lucida Grande";
 }
 
+/*  ================================== */
+.slider-container {
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+}
+
+.slider-row {
+  display: inline-block;
+  width:50%;
+  height: 300px;
+}
+
+.slider-item {
+  display: block;
+  /* display: inline-block; */
+        justify-content: space-evenly;
+        position: relative;
+        
+}
+
+.slider-item img {
+  width: 40%;
+  height: 300px;
+  object-fit: contain;
+  /* float: left; */
+  display: inline-block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 150px;
+  left: 33.33%;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+}
+
+/* animasi */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+      opacity: 0.4;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+      opacity: 0.4;
+  }
+  to {
+      opacity: 1;
+  }
+
+}
+/* ================================== */
+
+
+
 a {
   text-decoration: none;
 }
@@ -147,7 +222,7 @@ header {
   color: #b3aeb5;
 }
 
-.project-wrapper {
+/* .project-wrapper {
   border-bottom: 1px solid #eee;
   padding-bottom: 80px;
   text-align: center;
@@ -168,7 +243,7 @@ header {
 .project-icon {
   position: relative;
   
-}
+} */
 
 /* .project-icon p {
   position: absolute;
@@ -177,27 +252,27 @@ header {
   color: white;
 } */
 
-.project-icon img {
+/* .project-icon img {
   position: relative;
   width: 60%;
   height: auto;
   /* animation-name: zoom-in-out;
-  animation-duration: 2s; */
-  -webkit-animation:zoom-in-out 2s; /* Safari dan Chrome */
-  -moz-animation:zoom-in-out 2s; /* Firefox */
-  -ms-animation:zoom-in-out 2s; /* Internet Explorer */
-  -o-animation:zoom-in-out 2s; /* Opera */
-  animation:zoom-in-out 2s; /* W3C */
+  animation-duration: 2s; 
+  -webkit-animation:zoom-in-out 2s; Safari dan Chrome
+  -moz-animation:zoom-in-out 2s; Firefox
+  -ms-animation:zoom-in-out 2s; Internet Explorer
+  -o-animation:zoom-in-out 2s; Opera
+  animation:zoom-in-out 2s; W3C
   animation-iteration-count: infinite;
-}
+} */
 
-@keyframes zoom-in-out {
+/* @keyframes zoom-in-out {
   0% { transform: scale(1); }
    25% { transform: scale(0.6); }
    50% { transform: scale(0.7); }
    75% { transform: scale(0.6); }
    100% { transform: scale(1); }
-}
+} */
 
 .text-contents {
   width: 80%;
@@ -290,3 +365,77 @@ input, textarea{
 .footer a:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+.faq-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+
+.faq-container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px #ccc solid;
+  text-align: left;
+  font-size: 15px;
+  transition: background-color 0.2s linear;
+}
+
+/* .accordion:hover {
+  background-color: #ccc;
+} */
+
+.panel {
+  display: none;
+  padding: 0 18px;
+  background-color: white;
+  text-align: left;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  
+}
+
+button.accordion {
+  width: 100%;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+button.accordion:after {
+  font-family: FontAwesome;
+  content: "\f150";
+  font-family: "fontawesome";
+  font-size: 18px;
+  float: right;
+}
+
+button.accordion.is-open:after {
+  content: "\f151";
+  
+}
+button.accordion:hover,
+button.accordion.is-open {
+  background-color: #ddd;
+}
+
+
