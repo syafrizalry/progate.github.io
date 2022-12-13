@@ -423,14 +423,14 @@ button.accordion {
 
 button.accordion:after {
   font-family: FontAwesome;
-  content: "\f150";
+  content: "\f107";
   font-family: "fontawesome";
   font-size: 18px;
   float: right;
 }
 
 button.accordion.is-open:after {
-  content: "\f151";
+  content: "\f106";
   
 }
 button.accordion:hover,
