@@ -16,10 +16,8 @@ const showSlide = (n) => {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+    slides[slideIndex].style.display = "block";
     
-    slides[slideIndex].style.display = "inline-block";
-    slides[slideIndex+1].style.display = "inline-block";
-    slides[slideIndex+2].style.display = "inline-block";
 }
 
 showSlide(slideIndex);
@@ -50,7 +48,7 @@ function btnResultClick(){
 const accordion = document.getElementsByClassName("accordion");
 
 for (let i = 0; i < accordion.length; i++) {
-accordion[i].addEventListener("click", function () {
+    accordion[i].addEventListener("click", function () {
     this.classList.toggle("is-open");
     const panel =this.nextElementSibling;
 
@@ -63,23 +61,23 @@ accordion[i].addEventListener("click", function () {
 
 }
 
-// const accordionBtns = document.querySelectorAll(".accordion");
+// Get the modal
+var modal = document.getElementById("myModal");
 
-// accordionBtns.forEach((accordion) => {
-//   accordion.onclick = function () {
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = $(".myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+function image(event)  {    
+    modal.style.display = "block";
+    modalImg.src = event.target.src;
+    captionText.innerHTML = event.target.alt;
+}
 
-//     this.classList.toggle("is-open");
-//     let content = this.nextElementSibling;
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-//     if (content.style.maxHeight) {
-//       //this is if the accordion is open
-//       content.style.maxHeight = null;
-
-//     } else {
-//       //if the accordion is currently closed
-//       content.style.maxHeight = content.scrollHeight + "px";
-//     }
-
-//   };
-
-// });
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}

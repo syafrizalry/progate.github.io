@@ -51,66 +51,48 @@
         </div>
       </div>
     </div>
-    <!-- <div class="project-wrapper">
-        <div class="heading">
-          <h2>Proyek Contoh</h2>
-        </div>
-
-        <div class="projects">
-          <div class="project">
-            <div class="project-icon">
-              <img src="img/1.png">
-            </div>
-             <p class="text-contents">Image 1 </p>
-          </div>
-          <div class="project">
-            <div class="project-icon">
-              <img src="img/2.png">
-            </div>
-            <p class="text-contents">Image 2</p>
-          </div>
-          <div class="project">
-            <div class="project-icon">
-              <img src="img/3.png">
-            </div>
-            <p class="text-contents">Image 3</p>
-          </div>
-          <div class="clear"></div>
-        </div>
-
-    </div> -->
     
     <div class="slider-container">
       <div class="slider-row">
         <div class="slider-item fade">
-            <img src="img/ninjaken.png" />
-        </div>
-        
-        <div class="slider-item fade">
-            <img src="img/gurudomba.png" />
+            <img id="img1" class="myImg" onclick="image(event)" alt = "ninjaken.png" src="img/ninjaken.png" />
         </div>
         <div class="slider-item fade">
-            <img src="img/happy-ninjaken.png" />
+            <img id = "img2" class="myImg" onclick="image(event)" alt = "gurudomba.png" src="img/gurudomba.png" />
         </div>
         <div class="slider-item fade">
-            <img src="img/gurudomba-flying.png" />
+            <img id="img3" class="myImg" onclick="image(event)" alt = "happy-ninjaken.png" src="img/happy-ninjaken.png" />
         </div>
         <div class="slider-item fade">
-            <img src="img/1.png" />
+            <img id="img4" class="myImg" onclick="image(event)" alt = "gurudomba-flying.png" src="img/gurudomba-flying.png" />
         </div>
         <div class="slider-item fade">
-            <img src="img/2.png" />
+            <img id="img5" class="myImg" onclick="image(event)" alt = "1.png" src="img/1.png" />
         </div>
         <div class="slider-item fade">
-            <img src="img/3.png" />
+            <img id="img6" class="myImg" onclick="image(event)" alt = "2.png" src="img/2.png" />
         </div>
-
+        <div class="slider-item fade">
+            <img id="img7" class="myImg" onclick="image(event)" alt = "3.png" src="img/3.png" />
+        </div>
+        <div class ="imgArray"></div>
         <a class="prev" onclick="updateSlide(-1)">&#10094;</a>
         <a class="next" onclick="updateSlide(1)">&#10095;</a>
-
       </div>
     </div>
-  
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01">
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
 
     <div class="contact-wrapper">
       <div class="container">
