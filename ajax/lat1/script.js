@@ -8,7 +8,7 @@ async function fetchData() {
     
     let data ='';
     data = '<div class="detail">';
-    data =`<img src=${json.sprites.front_default}>`;
+    data +=`<img src=${json.sprites.front_default}>`;
     data +=`<br>id: ${json.id}`;
     data +=`<br>name: ${json.name}`;
     data +=`<br>type: ${json.types[0].type.name}<p>`;
